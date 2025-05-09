@@ -3,35 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>McKaimelis Parduotuve</title>
+  <title>Mckaimeliai Store</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+  <style>
+    body.dark {
+      background-color: #1a1625;
+      color: #e0e7ff;
+    }
+    body.dark header,
+    body.dark footer,
+    body.dark .bg-purple-200 {
+      background-color: #2e1f4d !important;
+    }
+    body.dark .text-purple-800,
+    body.dark .text-purple-700 {
+      color: #c4b5fd !important;
+    }
+    body.dark .text-blue-700 {
+      color: #93c5fd !important;
+    }
+    body.dark .bg-blue-300 {
+      background-color: #60a5fa !important;
+    }
+    body.dark .hover\:bg-blue-400:hover {
+      background-color: #3b82f6 !important;
+    }
+    body.dark .text-purple-900 {
+      color: #ede9fe !important;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <div class="min-h-screen p-6">
-    <div class="max-w-4xl mx-auto text-center mb-12">
-      <h1 class="text-4xl font-bold mb-4">McKaimelis Parduotuve</h1>
-      <p class="text-lg text-gray-300">Support the server and unlock awesome perks!</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h2 class="text-2xl font-bold mb-2">Vip</h2>
-        <p class="text-gray-300 mb-4">Gives you privileges to sex mod in the server</p>
-        <p class="text-yellow-400 font-bold text-lg mb-4">$5.00</p>
-        <a href="#" class="block bg-green-500 hover:bg-green-400 text-center py-2 rounded text-white">Buy Now</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h2 class="text-2xl font-bold mb-2">Admin</h2>
-        <p class="text-gray-300 mb-4">/op</p>
-        <p class="text-yellow-400 font-bold text-lg mb-4">$100.00</p>
-        <a href="#" class="block bg-green-500 hover:bg-green-400 text-center py-2 rounded text-white">Buy Now</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h2 class="text-2xl font-bold mb-2">Savininkas</h2>
-        <p class="text-gray-300 mb-4">All perks + Server host.</p>
-        <p class="text-yellow-400 font-bold text-lg mb-4">$2000.00</p>
-        <a href="#" class="block bg-green-500 hover:bg-green-400 text-center py-2 rounded text-white">Buy Now</a>
+<body class="bg-purple-100 text-gray-900">
+  <header class="bg-purple-200 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-purple-800">Mckaimeliai Store</h1>
+      <div>
+        <nav class="inline-block">
+          <a href="#ranks" class="mx-2 text-purple-700 hover:text-blue-500">Ranks</a>
+          <a href="#keys" class="mx-2 text-purple-700 hover:text-blue-500">Keys</a>
+        </nav>
+        <button onclick="toggleDarkMode()" class="ml-4 bg-blue-300 hover:bg-blue-400 text-purple-900 font-semibold px-3 py-1 rounded">
+          Toggle Dark Mode
+        </button>
       </div>
     </div>
-  </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-10 px-4">
+    <section class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-purple-800 mb-2">Welcome to the Mckaimeliai Minecraft Shop!</h2>
+      <p class="text-blue-700">Support the server by purchasing ranks and crate keys below.</p>
+    </section>
+
+    <section id="ranks" class="mb-16">
+      <h3 class="text-2xl font-semibold text-purple-700 mb-6">Buy Ranks</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-purple-200 p-6 rounded-lg shadow-md text-center">
+          <h4 class="text-xl font-bold text-purple-800 mb-2">VIP Rank</h4>
+          <p class="mb-4 text-blue-700">Basic perks and commands.</p>
+          <button class="bg-blue-300 hover:bg-blue-400 px-4 py-2 rounded text-purple-900 font-semibold">Buy for $5</button>
+        </div>
+        <div class="bg-purple-200 p-6 rounded-lg shadow-md text-center">
+          <h4 class="text-xl font-bold text-purple-800 mb-2">Omega Rank</h4>
+          <p class="mb-4 text-blue-700">Advanced perks and more!</p>
+          <button class="bg-blue-300 hover:bg-blue-400 px-4 py-2 rounded text-purple-900 font-semibold">Buy for $10</button>
+        </div>
+        <div class="bg-purple-200 p-6 rounded-lg shadow-md text-center">
+          <h4 class="text-xl font-bold text-purple-800 mb-2">Master Rank</h4>
+          <p class="mb-4 text-blue-700">All perks + exclusive commands.</p>
+          <button class="bg-blue-300 hover:bg-blue-400 px-4 py-2 rounded text-purple-900 font-semibold">Buy for $20</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="keys">
+      <h3 class="text-2xl font-semibold text-purple-700 mb-6">Buy Crate Keys</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-purple-200 p-6 rounded-lg shadow-md text-center">
+          <h4 class="text-xl font-bold text-purple-800 mb-2">VIP Key</h4>
+          <p class="mb-4 text-blue-700">Unlock VIP crates.</p>
+          <button class="bg-blue-300 hover:bg-blue-400 px-4 py-2 rounded text-purple-900 font-semibold">Buy for $2</button>
+        </div>
+        <div class="bg-purple-200 p-6 rounded-lg shadow-md text-center">
+          <h4 class="text-xl font-bold text-purple-800 mb-2">Omega Key</h4>
+          <p class="mb-4 text-blue-700">Unlock Omega crates.</p>
+          <button class="bg-blue-300 hover:bg-blue-400 px-4 py-2 rounded text-purple-900 font-semibold">Buy for $4</button>
+        </div>
+        <div class="bg-purple-200 p-6 rounded-lg shadow-md text-center">
+          <h4 class="text-xl font-bold text-purple-800 mb-2">Master Key</h4>
+          <p class="mb-4 text-blue-700">Unlock Master crates.</p>
+          <button class="bg-blue-300 hover:bg-blue-400 px-4 py-2 rounded text-purple-900 font-semibold">Buy for $6</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-purple-200 text-center py-6">
+    <p class="text-sm text-purple-700">&copy; 2025 Mckaimeliai Minecraft Server. All rights reserved.</p>
+  </footer>
 </body>
 </html>
